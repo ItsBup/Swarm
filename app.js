@@ -71,7 +71,11 @@ const victims = [{
 // move victims randomly between locations
 // attack victims to turn them into bats
 function drawVictims(){
-    locations.forEach(location => {
-        let 
+    locations.forEach(currentLocation => {
+        let filteredVictims = victims.filter(victim => victim.location == currentLocation)
+        const currentLocationElm = document.getElementById(currentLocation)
+        let victimPicture = filteredVictims.map(victim => victim.picture)
+        currentLocationElm.innerText = victimPicture.join('')
     }); 
 }
+drawVictims()
