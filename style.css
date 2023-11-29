@@ -8,3 +8,14 @@
     background-position: top;
     background-size: cover;
 } */
+
+.locationCard {
+    background: rgba(0, 0, 0, 0.85);
+}
+
+.locationCard:hover{
+    background-image: url(https://img.buzzfeed.com/buzzfeed-static/static/2021-07/21/16/asset/c290e2aff836/sub-buzz-7497-1626886519-10.jpg?downsize=700%3A%2A&output-quality=auto&output-format=auto);
+    background-position: center;
+    background-size: cover;
+
+}
