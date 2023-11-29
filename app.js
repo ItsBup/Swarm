@@ -1,8 +1,10 @@
+console.log('hello there! ~Obi-Wan Kenobi')
+
 const locations = [
     '🏤', '🏥', '🏭', '🏢', '🏣'
 ]
 
-const people = [{
+const victims = [{
         name: 'Jimbo',
         picture: '🤵',
         location: '🏤'
@@ -63,3 +65,13 @@ const people = [{
         location: '🏢',
     }
 ]
+
+// functions needed:
+// draw victims at locations
+// move victims randomly between locations
+// attack victims to turn them into bats
+function drawVictims(){
+    locations.forEach(location => {
+        let 
+    }); 
+}
