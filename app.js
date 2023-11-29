@@ -82,12 +82,13 @@ function drawVictims(){
 }
 
 function attackLocation(DangerZone){
+    console.log(DangerZone)
     let victimThreatened = victims.filter(victim => victim.location == DangerZone)
-    let thrall = victimThreatened.find(victim => victims.picture != '🦇')
-    if(thrall){
-        victims.picture = '🦇'
-    }
-    
+    let thralls = victimThreatened.filter(victim => victim.picture != '🦇')
+    thralls.forEach(victim => {
+        victim.picture = '🦇'
+    });
+    drawVictims()
 }
 
 function moveItmoveIt() {
