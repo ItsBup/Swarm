@@ -68,10 +68,9 @@ const victims = [{
 
 // functions needed:
 // draw victims at locations --DONE
-// attack victims to turn them into bats
-// move victims randomly between locations after attacks
-// are you winning son?
-// are you losing son?
+// attack victims to turn them into bats --DONE
+// move victims randomly between locations after attacks --DONE
+// are you winning son?are you losing son?
 function drawVictims(){
     locations.forEach(currentLocation => {
         let filteredVictims = victims.filter(victim => victim.location == currentLocation)
@@ -90,6 +89,7 @@ function attackLocation(DangerZone){
     });
     moveItmoveIt()
     drawVictims()
+    checkDAWN()
 }
 
 function moveItmoveIt() {
@@ -99,6 +99,18 @@ function moveItmoveIt() {
     });
 }
 
+function checkDAWN() {
+    let faithful=victims.filter(victim => victim.picture = '🦇')
+    if(victims.length = faithful.length){
+        window.alert('Congrats! You are a monster.')
+    }
+    Dawn=Dawn-1
+    if(Dawn < 0){
+        window.alert('LOOSER. The sun burns. Bad.')
+    }
+}
+
+let Dawn=6
 
 drawVictims()
 
