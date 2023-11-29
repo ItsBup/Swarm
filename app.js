@@ -100,17 +100,23 @@ function moveItmoveIt() {
 }
 
 function checkDAWN() {
-    let faithful=victims.filter(victim => victim.picture = '🦇')
-    if(victims.length = faithful.length){
+    let faithful=victims.filter(victim => victim.picture == '🦇')
+    if(victims.length == faithful.length){
         window.alert('Congrats! You are a monster.')
     }
     Dawn=Dawn-1
     if(Dawn < 0){
-        window.alert('LOOSER. The sun burns. Bad.')
+        if(alert('LOOSER. The sun burns. Bad.')){}
+        else window.location.reload();
     }
 }
 
 let Dawn=6
 
 drawVictims()
+makeHunter()
 
+function makeHunter(){
+    hunter = victims[Math.floor(Math.random()*victims.length)]
+    console.log(hunter)
+}
