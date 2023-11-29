@@ -67,9 +67,11 @@ const victims = [{
 ]
 
 // functions needed:
-// draw victims at locations
-// move victims randomly between locations
+// draw victims at locations --DONE
 // attack victims to turn them into bats
+// move victims randomly between locations after attacks
+// are you winning son?
+// are you losing son?
 function drawVictims(){
     locations.forEach(currentLocation => {
         let filteredVictims = victims.filter(victim => victim.location == currentLocation)
@@ -78,4 +80,19 @@ function drawVictims(){
         currentLocationElm.innerText = victimPicture.join('')
     }); 
 }
+
+function attackLocation(DangerZone){
+    let victimThreatened = victims.filter(victim => victim.location == DangerZone)
+    let thrall = victimThreatened.find(victim => victims.picture != '🦇')
+    if(thrall){
+        victims.picture = '🦇'
+    }
+    
+}
+
+function moveItmoveIt() {
+    
+}
+
 drawVictims()
+
