@@ -83,6 +83,10 @@ function drawVictims(){
 function attackLocation(DangerZone){
     console.log(DangerZone)
     let victimThreatened = victims.filter(victim => victim.location == DangerZone)
+    if(hunter.location == DangerZone){
+        if(alert('AHHHHH JACOB BLACK IS HERE 🐺💀😭')){}
+        else window.location.reload();
+    }
     let thralls = victimThreatened.filter(victim => victim.picture != '🦇')
     thralls.forEach(victim => {
         victim.picture = '🦇'
