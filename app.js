@@ -88,12 +88,17 @@ function attackLocation(DangerZone){
     thralls.forEach(victim => {
         victim.picture = '🦇'
     });
+    moveItmoveIt()
     drawVictims()
 }
 
 function moveItmoveIt() {
-    
+    victims.forEach(victim => {
+        let newLocation=locations[Math.floor(Math.random()*locations.length)]
+        victim.location=newLocation
+    });
 }
+
 
 drawVictims()
 
